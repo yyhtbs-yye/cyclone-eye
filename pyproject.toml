@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cyclone"
+version = "0.1.0"
+description = "Neural Network Low Level Vision Backbones."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Yuhang Ye" }]
+keywords = [
+  "low-level vision"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+# Core deps for the LaTeX pipeline + Ollama chat + validation
+dependencies = [
+    "timm",
+]
+
+[project.optional-dependencies]
+dev = [
+]
+
+[project.urls]
+Homepage = "https://example.com/cyclone"
+Repository = "https://example.com/cyclone.git"
+
+[project.scripts]
+# After install, you can run: `cyclone`
+cyclone = "cyclone.demo.run:main"
+
+[tool.setuptools]
+packages = ["cyclone"]
